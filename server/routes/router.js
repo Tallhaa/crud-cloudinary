@@ -53,7 +53,7 @@ router.post("/register", upload.single("photo"), async (req, res) => {
 })
 
 
-router.get("/getdata", async (req, res) => {
+router.get("/", async (req, res) => {
     try {
         const getUser = await users.find();
         res.status(200).json(getUser)
