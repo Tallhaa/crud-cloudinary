@@ -12,7 +12,7 @@ const Home = () => {
     
 axios.defaults.withCredentials = true;
     const getUserData = async () => {
-        const res = await axios.get("https://crud-cloudinary-api.vercel.app/getdata", {
+        const res = await axios.get("https://crud-cloudinary-server.vercel.app/getdata", {
             headers: {
                 "Content-Type": "application/json"
             }
@@ -28,7 +28,7 @@ axios.defaults.withCredentials = true;
     }
 
     const dltUser = async (id) => {
-        const res = await axios.delete(`http://localhost:4004/${id}`, {
+        const res = await axios.delete(`https://crud-cloudinary-server.vercel.app/${id}`, {
             headers: {
                 "Content-Type": "application/json"
             }
