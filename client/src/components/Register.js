@@ -24,7 +24,7 @@ const Register = () => {
     };
 
     const res = await axios.post(
-      "https://crud-cloudinary-api.vercel.app/register",
+      "https://crud-cloudinary-server.vercel.app/register",
       formData,
       config
     );
