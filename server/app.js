@@ -9,7 +9,7 @@ const port = 4004;
 
 app.use(cors(
     {
-        origin: [""],
+        origin: ["https://crud-cloudinary-client.vercel.app"],
         methods: ["POST", "GET", "PUT", "DELETE"],
         credentials: true
     }
