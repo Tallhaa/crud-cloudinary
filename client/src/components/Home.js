@@ -9,9 +9,10 @@ import moment from "moment"
 const Home = () => {
     const [data, setData] = useState([]);
     console.log(data)
-
+    
+axios.defaults.withCredentials = true;
     const getUserData = async () => {
-        const res = await axios.get("http://localhost:4004/getdata", {
+        const res = await axios.get("https://crud-cloudinary-api.vercel.app/getdata", {
             headers: {
                 "Content-Type": "application/json"
             }
