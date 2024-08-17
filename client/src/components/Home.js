@@ -12,7 +12,7 @@ const Home = () => {
     
 axios.defaults.withCredentials = true;
     const getUserData = async () => {
-        const res = await axios.get("https://crud-cloudinary-server.vercel.app/getdata", {
+        const res = await axios.get("https://crud-cloudinary-server.vercel.app/", {
             headers: {
                 "Content-Type": "application/json"
             }
