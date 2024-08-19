@@ -24,7 +24,7 @@ const Register = () => {
     };
 
     const res = await axios.post(
-      "https://crud-cloudinary-server.vercel.app/register",
+      `${process.env.REACT_APP_BACKEND_BASEURL}/register`,
       formData,
       config
     );

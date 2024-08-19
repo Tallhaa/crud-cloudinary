@@ -12,7 +12,7 @@ const Update = () => {
     const { id } = useParams();
 
     const getDetails = async () => {
-        const res = await axios.get(`https://crud-cloudinary-server.vercel.app/${id}`, {
+        const res = await axios.get(`${process.env.REACT_APP_BACKEND_BASEURL}/${id}`, {
             headers: {
                 "Content-Type": "application/json"
             }
@@ -50,7 +50,7 @@ const Update = () => {
         };
 
         const res = await axios.put(
-            `https://crud-cloudinary-api.vercel.app/${id}`,
+            `${process.env.REACT_APP_BACKEND_BASEURL}/${id}`,
             formData,
             config
         );
