@@ -1,15 +1,11 @@
 {
-  "installCommand": "npm install --legacy-peer-deps",
-  "version": 2,
+  "version": 2, // Vercel version
   "builds": [
     {
-      "src": "app.js",
+      // Specify file to convert to a serverless function
+      "src": "server.js",
+      // Specify the NPM module that is used for the build
       "use": "@vercel/node"
-    },
-    {
-      "src": "src/**/*",
-      "use": "@vercel/static"
     }
-  ],
-  "routes": [{ "src": "/(.*)", "dest": "/" }]
+  ]
 }
